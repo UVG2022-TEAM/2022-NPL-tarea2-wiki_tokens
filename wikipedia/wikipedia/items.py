@@ -5,10 +5,5 @@
 
 import scrapy
 
-
-class WikipediaItem(scrapy.Item):
-    parrafo = scrapy.Field()
-
-
-# class TokenText(scrapy.Item):
-#    text = scrapy.Field()
+class TokenText(scrapy.Item):
+    text = scrapy.Field()
