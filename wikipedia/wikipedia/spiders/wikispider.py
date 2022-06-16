@@ -13,18 +13,18 @@ class wikiSpider(scrapy.Spider):
     start_urls = ['https://en.wikipedia.org/wiki/Wikipedia:Featured_articles']
 
 
-    custom_settings = {
-        'FEED_FORMAT': 'json',
-        'FEED_URI': 'file:C://Users//wchavarria//OneDrive - Comunicaciones Celulares, S.A//Analytics//sample-code//maestria_data_science//nlp//tarea_scrappy//fran-%(time)s.json'
+    #custom_settings = {
+        #'FEED_FORMAT': 'json',
+        #'FEED_URI': 'file:C://Users//wchavarria//OneDrive - Comunicaciones Celulares, S.A//Analytics//sample-code//maestria_data_science//nlp//tarea_scrappy//fran-%(time)s.json'
         #'CLOSESPIDER_ITEMCOUNT': 20
-    }
+    #}
 
     def parse(self, response):
         i = 0
         for link in response.css('.featured_article_metadata > a'):
             yield response.follow(link.attrib.get('href'), callback=self.parse_article_data)
             i += 1
-            if i == 100: # Solo leer el primer link
+            if i == 5: # Solo leer el primer link
                 break
 
     def parse_article_data(self, response):
