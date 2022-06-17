@@ -81,7 +81,7 @@ Para cargar el environment configurado se tiene que leer el "environment.yml" co
   conda env create -f environment.yml
   ```
 
-Validamos que el enviroment "scrapping-citymax" esté instalado correctamente:
+Validamos que el enviroment "tarea2-wikitokens" esté instalado correctamente:
 
 * Anaconda Prompt
   ```sh
@@ -92,7 +92,7 @@ Activamos el nuevo enviroment:
 
 * Anaconda Prompt
   ```sh
-  conda activate scrapping-citymax
+  conda activate tarea2-wikitokens
   ```
 
 _Para mayor detalle consultar la referencia de [como instalar un .yml en conda.](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file)_ 
@@ -102,9 +102,9 @@ _Para mayor detalle consultar la referencia de [como instalar un .yml en conda.]
 Abrir su IDE de Python de preferencia, en nuestro caso usaremos Visual Studio Code. 
 
 1. Abrir la carpeta "2022-NPL-tarea2_wiki_tokens"
-2. *Tomamos como interprete Python 3.10.4 ('scrapping-citymax')
+2. *Tomamos como interprete Python 3.10.4 ('tarea2-wikitokens')
 3. Abrimos la terminal y realizamos los `cd` necesarios para situarnos en la carpeta "...\2022-NPL-tarea2_wiki_tokens\wikipedia\wikipedia"
-4. Situarnos en el archivp wiki_tokens.ipynb
+4. Situarnos en el archivo wiki_tokens.ipynb
 5. Ejecutar los chunks del notebook wiki_tokens.ipynb
 6. Obtenemos la gráfica _Vocabulario vs Tokens_
 
