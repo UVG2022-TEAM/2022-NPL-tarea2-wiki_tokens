@@ -29,14 +29,14 @@
   <p align="center">
     Tarea 2 de TEXT MINING & NATURAL LANGUAGE PROCESSING - SECCIÓN - 10 - 2022 - 1
     <br />
-    <a href="https://github.com/UVG2022-TEAM/2022-NPL-tarea1-scrapping"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/UVG2022-TEAM/2022-NPL-tarea2-wiki_tokens"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/UVG2022-TEAM/2022-NPL-tarea1-scrapping">View Demo</a>
+    <a href="https://github.com/UVG2022-TEAM/2022-NPL-tarea2-wiki_tokens">View Demo</a>
     ·
-    <a href="https://github.com/UVG2022-TEAM/2022-NPL-tarea1-scrapping/issues">Report Bug</a>
+    <a href="https://github.com/UVG2022-TEAM/2022-NPL-tarea2-wiki_tokens/issues">Report Bug</a>
     ·
-    <a href="https://github.com/UVG2022-TEAM/2022-NPL-tarea1-scrapping/issues">Request Feature</a>
+    <a href="https://github.com/UVG2022-TEAM/2022-NPL-tarea2-wiki_tokens/issues">Request Feature</a>
   </p>
 </div>
 
@@ -47,17 +47,13 @@
 
 <!--  [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-En nuestra última clase vimos algunas herramientas para hacer scrapping de páginas web y realizamos scrapping de Tripadvisor. Realicen scrapping de alguna página web con estas herramientas u otras de alguna página web (puede ser Tripadvisor también u otra página) bajo los siguientes requerimientos:
+1. Hacer scrapping de wikipedia hasta llegar a 1 millón de tokens. 
 
-* el resultado del scrapping debe ser texto clasificado, es decir, una colección de fragmentos de texto cada uno de los cuales pertenece a alguna categoría,
-* el código debe quedar alojado en algún repositorio público, dentro de una organización (Github) o grupo (Gitlab) a la que pertenezcan todos los integrantes del grupo de trabajo, 
-* en el repositorio debe haber un README.md con 1. instrucciones claras para instalar y correr su código tal que yo pueda ejecutarlo y obtener el resultado del scrapping (p. ej. crea un ambiente de python con este requirements.txt y ejecuta este comando), 2. formato y estructura del resultado (p. ej. CSV con columnas que se llaman así), 3. descripción del contenido del sitio web, así como de lo que representan los fragmentos de texto y las categorías en las que está clasificado, 4. las contribuciones de cada integrante del grupo y 5. cualquier información adicional que consideren importante.
+2. Tokenización por separación por espacios como primer modelo simple de tokenización. 
 
-El entregable en Canvas es el link de su repositorio.
+3. Script de python que reciba un documento, tokenice, extraiga los tokens y su cantidad, así como y el vocabulario y su tamaño.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 ### Desarrollado con
 
@@ -105,54 +101,25 @@ _Para mayor detalle consultar la referencia de [como instalar un .yml en conda.]
 
 Abrir su IDE de Python de preferencia, en nuestro caso usaremos Visual Studio Code. 
 
-1. Abrir la carpeta "2022-NPL-tarea1-scrapping"
-2. Tomamos como interprete Python 3.10.4 ('scrapping-citymax')
-3. Abrimos la terminal y realizamos los `cd` necesarios para situarnos en la carpeta "...\2022-NPL-tarea1-scrapping\citymax_scrapping\citymax_scrapping"
-4. Una vez situados en la carpeta del código de Python ejecutamos el `crawl` en la terminal de nuestro IDE
-   ```sh
-   scrapy crawl actives -t csv -o citymax.csv
-   ```
-5. Deberá de generarnos un archivo .csv de nombre "citymax", no tiene límite así que dará scrapping a toda la página, de querer parar la ejecución es necesario presionar CTRL+C en la terminal
+1. Abrir la carpeta "2022-NPL-tarea2_wiki_tokens"
+2. *Tomamos como interprete Python 3.10.4 ('scrapping-citymax')
+3. Abrimos la terminal y realizamos los `cd` necesarios para situarnos en la carpeta "...\2022-NPL-tarea2_wiki_tokens\wikipedia\wikipedia"
+4. Situarnos en el archivp wiki_tokens.ipynb
+5. Ejecutar los chunks del notebook wiki_tokens.ipynb
+6. Obtenemos la gráfica _Vocabulario vs Tokens_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
-<!-- USAGE EXAMPLES -->
-## Formato y estructura del resultado
-
-Se genera un .csv que contiene las siguientes columnas:
-
-* _description_: detalle del inmueble. En este ponen información adicional, por ejemplo, que amenidades o conveniencias tiene. 
-* _name_: titulo del inmueble.  
-* _operation_: se indica si está a la venta o en renta. 
-* _price_: precio en dolares o quetzales de inmueble según su operación.
-* _type_: tipo de inmueble, ya sea: apartamento, bodega, casas, edificios, fincas, locales comerciales, oficinas, proyectos o terrenos. 
-
-_Ejemplo de [una casa en venta](https://www.citymax-gt.com/126746/Casa-en-venta-para-Inversi%C3%B3n-entrada-a-Olmeca-CES/)_.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-<!-- USAGE EXAMPLES -->
-## Descripción del contenido del sitio web
-
-CityMax Guatemala es una franquicia de negocios inmobiliarios, nacida en América Latina (Guatemala) para Latinoamericanos en el Año 2007. Cuenta a la venta todo tipo de inmuebles. Al presionar una opción dentro de su catalogo podemos obtener el detalle del inmueble. 
-
-_[Catalogo de inmuebles](https://www.citymax-gt.com/resultados-busqueda/?status=&type=&keyword=)_.
-
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 <!-- CONTRIBUTING -->
 ## Contribuciones de integrantes
 
-* Francisco Manjón y William Chavarría: Lectura de detalle por inmueble
-* Pablo Armas: Ciclo de pagineo y lectura de título de inmueble
-* André Rodas: Manejo de versiones y documentación
-* Todos: Unificación y QA de código trabajado
+* Francisco Manjón: Scrappy wikipedia 
+* William Chavarría: Data Cleansing & Tokenizacion 
+* André Rodas: Enviroment prep, Data wrangling & Documentación
+* Pablo Armas: QA, Documentación & Readme
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
