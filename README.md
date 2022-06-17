@@ -123,7 +123,3 @@ Abrir su IDE de Python de preferencia, en nuestro caso usaremos Visual Studio Co
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- CONTRIBUTING -->
-## Contenido adicional 
-
-El proyecto fué inspirado por un blog de rentabilidad del sector inmobiliario en Guatemala hecho por Daniel Fernández de [UFM Market Trends](https://trends.ufm.edu/articulo/rentabilidad-invertir-sector-inmobiliario-guatemala/).
